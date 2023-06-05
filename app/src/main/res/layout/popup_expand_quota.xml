@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp"
+    android:background="@drawable/esquinas_redondeadas"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/imagePopupExpandQuota"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/imagen_pop_up_ampliar_cuota"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lg_rg"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/textViewPopupExpandQuota"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/ampliaci_n_de_cuota"
+        android:textAlignment="center"
+        android:textColor="#183E00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/etDNIPopUpExpandQuota"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/dni_comunero"
+        android:minHeight="48dp"
+        android:selectAllOnFocus="true"
+        android:textColorHint="#183E00"
+        android:inputType="text"
+        android:autofillHints=""
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/etAmountToExpandPopUpExpandQuota"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/cantidad_a_ampliar"
+        android:minHeight="48dp"
+        android:selectAllOnFocus="true"
+        android:textColorHint="#183E00"
+        android:autofillHints=""
+        android:inputType="number"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutBTN"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_margin="26dp">
+
+        <Button
+            android:id="@+id/btnAssignPUExpandQuota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/esquinas_redondeadas3"
+            android:text="@string/asignar"
+            android:textColor="@color/white"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btnCancelPUExpandQuota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:background="@drawable/esquinas_redondeadas3"
+            android:text="@string/cancelar"
+            android:textColor="@color/white"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<resources>
+
+    <string-array name="tipo_parcela">
+        <item>Secano</item>
+        <item>Regadío</item>
+    </string-array>
+
+    <string-array name="estado_hidrante">
+        <item>On</item>
+        <item>Off</item>
+    </string-array>
+
+    <string name="app_name">RegaGest</string>
+    <string name="icono_toolbar" />
+    <string name="boton_salir" />
+    <string name="password" />
+    <string name="usuario">Usuario</string>
+    <string name="pasword">Contraseña</string>
+    <string name="acceder">Acceder</string>
+    <string name="boton_cerrar_app">Boton cerrar app</string>
+    <string name="boton_salir_valve_control">boton salir valve control</string>
+    <string name="boton_estadisticas">boton estadisticas</string>
+    <string name="imagen_testigo_hidrante">imagen testigo hidrante</string>
+    <string name="numero_hidrante">numero hidrante</string>
+    <string name="nombre_parcela">nombre parcela</string>
+    <string name="estado_hidrante">on/off</string>
+    <string name="cuota_usuario_asignada">cuota</string>
+    <string name="nombre_usuario">nombre usuario</string>
+    <string name="id_de_usuario">id usuario</string>
+    <string name="boton_salir_stats">boton salir stats</string>
+    <string name="asignar_cuota_anual">Asignar cuota anual</string>
+    <string name="ampliar_cuota">Ampliar cuota</string>
+    <string name="resetear_consumo">Resetear consumo</string>
+    <string name="consumo_actual">Consumo Actual</string>
+    <string name="consultar_comunero">Consultar comunero</string>
+    <string name="cambiar_contrase_a_de_administrador">Cambiar contraseña de administrador</string>
+    <string name="imagen_pop_up_ampliar_cuota">imagen pop up ampliar cuota</string>
+    <string name="ampliaci_n_de_cuota">Ampliación de cuota</string>
+    <string name="dni_comunero">DNI comunero</string>
+    <string name="cantidad_a_ampliar">Cantidad a ampliar</string>
+    <string name="asignar">Asignar</string>
+    <string name="cancelar">cancelar</string>
+    <string name="boton_salir_admin_stats">boton salir admin stats</string>
+    <string name="cuota">Cuota</string>
+    <string name="imagen_popup_asignar_cuota">imagen popup asignar cuota</string>
+    <string name="resetear_cuota">resetear cuota</string>
+    <string name="el_agua_nuestro_tesoro">El Agua. Nuestro tesoro....</string>
+</resources>

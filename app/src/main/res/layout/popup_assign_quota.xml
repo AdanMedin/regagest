@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp"
+    android:background="@drawable/esquinas_redondeadas"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/imagePUAssingQuota"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/imagen_popup_asignar_cuota"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lg_rg"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/textVAssingQuota"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/asignar_cuota_anual"
+        android:textAlignment="center"
+        android:textColor="#183E00"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPUAssignQuota"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/cuota"
+        android:minHeight="48dp"
+        android:selectAllOnFocus="true"
+        android:textColorHint="#183E00"
+        android:textStyle="bold"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:id="@+id/linearLPUAssignQuota"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_margin="30dp">
+
+        <Button
+            android:id="@+id/btnAssignPUAssignQuota"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/asignar"
+            android:background="@drawable/esquinas_redondeadas3"
+            tools:ignore="ButtonStyle"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btnCancelPUAssignQuota"
+            android:layout_marginStart="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelar"
+            android:background="@drawable/esquinas_redondeadas3"
+            tools:ignore="ButtonStyle"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

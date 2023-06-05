@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/listPreferredItemHeight"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp"
+    android:background="@drawable/esquinas_redondeadas"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/iv_testigo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/imagen_testigo_hidrante"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tv_numeroParcela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/iv_testigo"
+        android:textColor="#183E00"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        tools:text="@string/nombre_parcela" />
+
+
+    <TextView
+        android:id="@+id/tv_estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_numeroParcela"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/iv_testigo"
+        android:maxWidth="200dp"
+        android:textColor="#183E00"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:text="@string/estado_hidrante" />
+
+    <TextView
+        android:id="@+id/tv_numeroHidrante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="50dp"
+        android:textColor="#183E00"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:text="@string/numero_hidrante" />
+</RelativeLayout>

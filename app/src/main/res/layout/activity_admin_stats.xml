@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AdminStatsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAdminStats"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/esquinas_redondeadas_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivLogoAdminStats"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/icono_toolbar"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/logo1"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="6dp" />
+
+        <ImageButton
+            android:id="@+id/ibtnExitAdminStats"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/boton_salir_admin_stats"
+            android:scaleType="centerInside"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            app:srcCompat="@drawable/exit"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="347dp"
+            tools:layout_editor_absoluteY="5dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChartAdminStats"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAdminStats">
+
+    </com.github.mikephil.charting.charts.PieChart>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
