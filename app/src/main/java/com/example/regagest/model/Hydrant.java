@@ -1,5 +1,8 @@
 package com.example.regagest.model;
 
+import androidx.annotation.NonNull;
+
+@SuppressWarnings("unused")
 public class Hydrant {
 
     int hydrantNumber, parcelNumber;
@@ -38,6 +41,7 @@ public class Hydrant {
         this.estado = estado;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Hydrant{" +

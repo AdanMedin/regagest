@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 
 import java.io.Serializable;
 
+@SuppressWarnings("unused")
 public class User implements Serializable {
     String id, user, pass;
     int quota;

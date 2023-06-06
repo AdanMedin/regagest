@@ -25,12 +25,23 @@
         android:id="@+id/tv_numeroParcela"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/ivNumP"
+        android:textColor="#183E00"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:text="@string/n" />
+
+    <TextView
+        android:id="@+id/ivNumP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_toEndOf="@+id/iv_testigo"
         android:textColor="#183E00"
-        android:textStyle="bold"
         android:textSize="15sp"
-        tools:text="@string/nombre_parcela" />
+        android:textStyle="bold"
+        tools:text="@string/n_parcela" />
 
 
     <TextView
@@ -48,14 +59,30 @@
         tools:text="@string/estado_hidrante" />
 
     <TextView
+
+        android:id="@+id/ivNumH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/tv_numeroHidrante"
+        android:textColor="#183E00"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:ignore="RelativeOverlap"
+        tools:text="@string/n_hidrante" />
+
+    <TextView
         android:id="@+id/tv_numeroHidrante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="10dp"
         android:textColor="#183E00"
         android:textSize="15sp"
         android:textStyle="bold"
-        tools:text="@string/numero_hidrante" />
+        tools:text="@string/n"
+        tools:ignore="RelativeOverlap" />
 </RelativeLayout>

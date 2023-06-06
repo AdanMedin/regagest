@@ -35,7 +35,7 @@ import java.util.Objects;
 public class AdminActivity extends AppCompatActivity {
 
     User user;
-    Button btnAssignQuota, btnExpandQuota, btnResetConsumption, btnCurrentConsumption, btnResetQuota, btnChangeAdminPass;
+    Button btnAssignQuota, btnExpandQuota, btnResetConsumption, btnCurrentConsumption, btnResetQuota;
     ImageButton btnExit;
 
     @Override
@@ -86,11 +86,7 @@ public class AdminActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
             //Acción deseada al presionar si o no
-            builder.setMessage("¿Seguro que quiere reiniciar el consumo de los comuneros?").setCancelable(false).setPositiveButton("Si", (dialog, i) -> {
-
-                resetConsumptions();
-
-            }).setNegativeButton("No", (dialog, i) -> dialog.cancel());
+            builder.setMessage("¿Seguro que quiere reiniciar el consumo de los comuneros?").setCancelable(false).setPositiveButton("Si", (dialog, i) -> resetConsumptions()).setNegativeButton("No", (dialog, i) -> dialog.cancel());
             AlertDialog alert = builder.create();
             alert.show();
         });
@@ -102,11 +98,7 @@ public class AdminActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
             //Acción deseada al presionar si o no
-            builder.setMessage("¿Seguro que quiere reiniciar la cuota de los comuneros?").setCancelable(false).setPositiveButton("Si", (dialog, i) -> {
-
-                resetQuotas();
-
-            }).setNegativeButton("No", (dialog, i) -> dialog.cancel());
+            builder.setMessage("¿Seguro que quiere reiniciar la cuota de los comuneros?").setCancelable(false).setPositiveButton("Si", (dialog, i) -> resetQuotas()).setNegativeButton("No", (dialog, i) -> dialog.cancel());
             AlertDialog alert = builder.create();
             alert.show();
         });
@@ -151,7 +143,7 @@ public class AdminActivity extends AppCompatActivity {
             }
             // Verificar si el valor no es un número
             try {
-                double quota = Double.parseDouble(etAssignQuota.getText().toString());
+                Double.parseDouble(etAssignQuota.getText().toString());
             } catch (NumberFormatException e) {
                 Toast.makeText(this, "Ingrese un número válido", Toast.LENGTH_SHORT).show();
                 return;
@@ -205,7 +197,7 @@ public class AdminActivity extends AppCompatActivity {
             }
             // Verificar si el valor no es un número
             try {
-                double quota = Double.parseDouble(etAmount.getText().toString());
+                Double.parseDouble(etAmount.getText().toString());
             } catch (NumberFormatException e) {
                 Toast.makeText(this, "Ingrese un número válido", Toast.LENGTH_SHORT).show();
                 return;
@@ -273,9 +265,10 @@ public class AdminActivity extends AppCompatActivity {
                     }
                 }
                 cursor.close();
+            } else {
+                Toast.makeText(this, "Comunero con DNI: " + dni + " no existe", Toast.LENGTH_SHORT).show();
             }
             db.close();
-            Toast.makeText(this, "Comunero con DNI: " + dni + " no existe", Toast.LENGTH_SHORT).show();
 
         } catch (SQLiteException e) {
             Toast.makeText(this, "No se ha podido establecer la conexión con la base de datos de RegaGest", Toast.LENGTH_LONG).show();
@@ -405,8 +398,7 @@ public class AdminActivity extends AppCompatActivity {
         return commonerId;
     }
 
-    public boolean resetConsumptions() {
-        boolean setOk = false;
+    public void resetConsumptions() {
 
         // Creamos conexión con la base de datos
         AdminSQLiteOpenHelper adminDB = new AdminSQLiteOpenHelper(this, "regagest", null, 1);
@@ -420,17 +412,13 @@ public class AdminActivity extends AppCompatActivity {
 
             db.close();
 
-            setOk = true;
-
         } catch (SQLiteException e) {
             Toast.makeText(this, "No se ha podido establecer la conexión con la base de datos de RegaGest", Toast.LENGTH_LONG).show();
             Log.e(TAG, "Error processing request, imposible database connection: " + e.getMessage());
         }
-        return setOk;
     }
 
-    public boolean resetQuotas() {
-        boolean setOk = false;
+    public void resetQuotas() {
 
         // Creamos conexión con la base de datos
         AdminSQLiteOpenHelper adminDB = new AdminSQLiteOpenHelper(this, "regagest", null, 1);
@@ -444,12 +432,9 @@ public class AdminActivity extends AppCompatActivity {
 
             db.close();
 
-            setOk = true;
-
         } catch (SQLiteException e) {
             Toast.makeText(this, "No se ha podido establecer la conexión con la base de datos de RegaGest", Toast.LENGTH_LONG).show();
             Log.e(TAG, "Error processing request, imposible database connection: " + e.getMessage());
         }
-        return setOk;
     }
 }

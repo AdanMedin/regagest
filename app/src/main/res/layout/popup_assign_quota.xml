@@ -47,7 +47,8 @@
         android:selectAllOnFocus="true"
         android:textColorHint="#183E00"
         android:textStyle="bold"
-        android:inputType="number" />
+        android:inputType="number"
+        android:autofillHints="" />
 
     <LinearLayout
         android:id="@+id/linearLPUAssignQuota"
@@ -58,23 +59,23 @@
 
         <Button
             android:id="@+id/btnAssignPUAssignQuota"
-            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/asignar"
+            android:layout_marginStart="10dp"
             android:background="@drawable/esquinas_redondeadas3"
-            tools:ignore="ButtonStyle"
-            android:textColor="@color/white"/>
+            android:text="@string/asignar"
+            android:textColor="#000000"
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/btnCancelPUAssignQuota"
-            android:layout_marginStart="45dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cancelar"
+            android:layout_marginStart="45dp"
             android:background="@drawable/esquinas_redondeadas3"
-            tools:ignore="ButtonStyle"
-            android:textColor="@color/white"/>
+            android:text="@string/cancelar"
+            android:textColor="#000000"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 
 </LinearLayout>

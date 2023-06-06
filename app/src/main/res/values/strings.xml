@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <string-array name="tipo_parcela">
         <item>Secano</item>
@@ -28,7 +28,7 @@
     <string name="nombre_usuario">nombre usuario</string>
     <string name="id_de_usuario">id usuario</string>
     <string name="boton_salir_stats">boton salir stats</string>
-    <string name="asignar_cuota_anual">Asignar cuota anual</string>
+    <string name="asignar_cuota_anual" tools:ignore="Typos">Asignar cuota anual</string>
     <string name="ampliar_cuota">Ampliar cuota</string>
     <string name="resetear_consumo">Resetear consumo</string>
     <string name="consumo_actual">Consumo Actual</string>
@@ -45,4 +45,13 @@
     <string name="imagen_popup_asignar_cuota">imagen popup asignar cuota</string>
     <string name="resetear_cuota">resetear cuota</string>
     <string name="el_agua_nuestro_tesoro">El Agua. Nuestro tesoro....</string>
+    <string name="imagen_exit">imagen exit</string>
+    <string name="logo_exit">logo exit</string>
+    <string name="juan123">Juan123</string>
+    <string name="juan">Juan</string>
+    <string name="logo_start">logo start</string>
+    <string name="logo_rota">logo rota</string>
+    <string name="n">Nº</string>
+    <string name="n_parcela">Nº Parcela:</string>
+    <string name="n_hidrante">Nº Hidrante:</string>
 </resources>

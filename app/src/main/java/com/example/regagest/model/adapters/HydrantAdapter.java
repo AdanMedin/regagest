@@ -45,6 +45,8 @@ public class HydrantAdapter extends ArrayAdapter<Hydrant> {
             holder.tvEstado = convertView.findViewById(R.id.tv_estado);
             holder.tvNumeroHidrante = convertView.findViewById(R.id.tv_numeroHidrante);
             holder.ivTestigo = convertView.findViewById(R.id.iv_testigo);
+            holder.tvNP = convertView.findViewById(R.id.ivNumP);
+            holder.tvNH = convertView.findViewById(R.id.ivNumH);
 
             convertView.setTag(holder);
 
@@ -59,6 +61,8 @@ public class HydrantAdapter extends ArrayAdapter<Hydrant> {
         holder.tvNumeroParcela.setText(String.valueOf(hydrant.getParcelNumber()));
         holder.tvEstado.setText(hydrant.getEstado());
         holder.tvNumeroHidrante.setText(String.valueOf(hydrant.getHydrantNumber()));
+        holder.tvNP.setText(R.string.n_parcela);
+        holder.tvNH.setText(R.string.n_hidrante);
 
         if(hydrant.getEstado().equalsIgnoreCase("off")){
             holder.ivTestigo.setImageResource(R.drawable.btn_off);
@@ -75,5 +79,7 @@ public class HydrantAdapter extends ArrayAdapter<Hydrant> {
         TextView tvEstado;
         TextView tvNumeroHidrante;
         ImageView ivTestigo;
+        TextView tvNP;
+        TextView tvNH;
     }
 }
