@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+@SuppressWarnings("unused")
 public class DataBaseConnector {
     private static final String URL = "jdbc:mysql://localhost:3307/regagest";
     private static final String USER = "root";
@@ -21,9 +22,7 @@ public class DataBaseConnector {
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        } catch (InstantiationException e) {
+        } catch (IllegalAccessException | InstantiationException e) {
             throw new RuntimeException(e);
         }
     }

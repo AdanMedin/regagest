@@ -79,7 +79,7 @@
             android:layout_marginStart="10dp"
             android:background="@drawable/esquinas_redondeadas3"
             android:text="@string/asignar"
-            android:textColor="@color/white"
+            android:textColor="#000000"
             tools:ignore="ButtonStyle" />
 
         <Button
@@ -89,7 +89,7 @@
             android:layout_marginStart="45dp"
             android:background="@drawable/esquinas_redondeadas3"
             android:text="@string/cancelar"
-            android:textColor="@color/white"
+            android:textColor="#000000"
             tools:ignore="ButtonStyle" />
     </LinearLayout>
 

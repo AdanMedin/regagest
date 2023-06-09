@@ -141,9 +141,9 @@ public class StatsActivity extends AppCompatActivity {
 
             pieChart.setDrawEntryLabels(true);
             pieChart.setEntryLabelColor(customValueColor);
-            pieChart.setEntryLabelTextSize(14f);
+            pieChart.setEntryLabelTextSize(15f);
             pieChart.setEntryLabelTypeface(boldType);
-            pieChart.getLegend().setTextSize(14f);
+            pieChart.getLegend().setTextSize(20f);
 
             // Configura la sombra en el Paint del PieChart
             Paint paint = pieChart.getRenderer().getPaintRender();

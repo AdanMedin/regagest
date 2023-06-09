@@ -24,11 +24,14 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/icono_toolbar"
             android:scaleType="centerInside"
-            app:srcCompat="@drawable/logo1"/>
+            app:srcCompat="@drawable/logo1"
+            tools:ignore="ImageContrastCheck"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="1dp" />
 
         <ImageButton
             android:id="@+id/btnExitLogIn"
-            android:layout_width="50dp"
+            android:layout_width="60dp"
             android:layout_height="50dp"
             android:layout_gravity="end"
             android:background="#00FFFFFF"
@@ -38,7 +41,7 @@
             android:scaleY="0.6"
             app:srcCompat="@drawable/exit"
             tools:ignore="TouchTargetSizeCheck"
-            android:layout_marginEnd="15dp"/>
+            android:layout_marginEnd="10dp"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -60,7 +63,8 @@
             android:hint="@string/pasword"
             android:inputType="textPassword"
             android:minHeight="48dp"
-            android:text="Admin123"
+            android:selectAllOnFocus="true"
+            android:text="@string/juan123"
             android:textColor="#1E4D00"
             android:textColorHint="#29CC00"
             android:textColorLink="#29CC00" />
@@ -84,8 +88,9 @@
             android:hint="@string/usuario"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="Admin"
+            android:text="@string/juan"
             android:textColor="#1E4D00"
+            android:selectAllOnFocus="true"
             android:textColorHint="#29CC00"
             android:textColorLink="#29CC00"
             tools:ignore="TextSizeCheck" />
